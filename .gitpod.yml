@@ -10,7 +10,6 @@ tasks:
       export FLASK_ENV=development
     init: |
       conda create --file environment.yaml
-      conda activate flask
     command: |
       flask run
 
