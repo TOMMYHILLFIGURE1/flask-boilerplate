@@ -8,6 +8,7 @@ ports:
 tasks:
   - init: |
       conda init
+      ln -s /usr/bin/python python
 
 vscode:
   extensions:
