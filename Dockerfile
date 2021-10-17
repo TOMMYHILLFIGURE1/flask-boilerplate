@@ -4,7 +4,8 @@ FROM  continuumio/miniconda3
 COPY . .
 
 #---------------- Prepare the envirennment
-RUN conda env update --name base --file environment.yaml --prune
+RUN conda env update --name base --file environment.yaml --prune && \
+    conda init
 
 EXPOSE 5000
 
