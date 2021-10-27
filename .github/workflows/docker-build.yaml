@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: sra405/flask-boilerplate:latest,sra405/flask-boilerplate:${GITHUB_REF#refs/*/}
+          tags: sra405/flask-boilerplate:latest,sra405/flask-boilerplate:${{ GITHUB_REF#refs/*/ }}
