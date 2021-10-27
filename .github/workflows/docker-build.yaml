@@ -24,10 +24,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Set variables
-        run: |
-          VER=${ GITHUB_REF#refs/*/ }
-          echo "VERSION=$VER" >> $GITHUB_ENV
+      - name: Set tag version
+        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
 
       - name: Build and push
         uses: docker/build-push-action@v2
