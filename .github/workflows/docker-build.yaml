@@ -20,13 +20,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - run: |
-          docker build \
-            -t ${{ env.IMAGE_PATH }} \
-            docker/
-          docker push ${{ env.IMAGE_PATH }}
-      -
-        name: Build and push
+      - name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: .
