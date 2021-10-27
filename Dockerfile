@@ -29,7 +29,7 @@ RUN chown -R gitpod:gitpod /opt/conda \
 
 COPY environment.yaml environment.yaml
 
-RUN source ~/.bashrc && \
+RUN "source ~/.bashrc" && \
     conda env update --name base --file environment.yaml --prune
 
 # Give back control
