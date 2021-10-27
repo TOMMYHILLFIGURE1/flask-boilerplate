@@ -25,6 +25,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Set environment variables
+        id: vars
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
 
       - name: Build and push
@@ -34,4 +35,4 @@ jobs:
           push: true
           tags: |
             sra405/flask-boilerplate:latest
-            sra405/flask-boilerplate:${{ env.VERSION }}
+            sra405/flask-boilerplate:${{ steps.vars.outputs.VERSION }}
