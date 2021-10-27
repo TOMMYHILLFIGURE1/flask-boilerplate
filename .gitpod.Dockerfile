@@ -1,4 +1,4 @@
-FROM  sra405/flask-boilerplate:0.0.11
+FROM  sra405/flask-boilerplate:0.0.12
 
 COPY ./src/ .
 
