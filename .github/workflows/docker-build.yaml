@@ -1,10 +1,5 @@
 name: docker-build
 
-env:
-  global:
-    - USER=sra405
-    - REPO=flask-boilerplate
-
 on:
   push:
     tags:
