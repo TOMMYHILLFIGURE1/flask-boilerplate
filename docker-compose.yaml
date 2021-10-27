@@ -1,6 +1,8 @@
 version: "3"
 services:
   app:
-    build: .
+    build: 
+      context: .
+      dockerfile: .gitpod.Dockerfile
     ports:
       - "5000:5000"

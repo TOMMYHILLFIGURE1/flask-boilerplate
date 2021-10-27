@@ -1,4 +1,3 @@
-
 FROM  continuumio/miniconda3
 
 COPY environment.yaml environment.yaml
