@@ -1,5 +1,10 @@
 name: docker-build
 
+env:
+  global:
+    - USER=sra405
+    - REPO=flask-boilerplate
+
 on:
   push:
     tags:
@@ -33,5 +38,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.REPO }}:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.REPO }}:${{ env.VERSION }}
+            ${{ env.USER }}/${{ env.REPO }}:latest
+            ${{ env.USER }}/${{ env.REPO }}:${{ env.VERSION }}
