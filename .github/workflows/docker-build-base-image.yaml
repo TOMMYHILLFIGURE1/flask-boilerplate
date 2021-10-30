@@ -1,4 +1,4 @@
-name: docker-build
+name: docker-build-base-image
 
 on:
   push:
@@ -28,10 +28,11 @@ jobs:
         id: vars
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
 
-      - name: Build and push
+      - name: Build and push (Base Image)
         uses: docker/build-push-action@v2
         with:
           context: .
+          file: .gitpod.Dockerfile
           push: true
           tags: |
             sra405/flask-boilerplate:latest
