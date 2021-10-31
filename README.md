@@ -5,8 +5,11 @@ This repository is a collection of everything needed to get off the ground with 
 ## Get Going Quickly
 
 To get going with this repo and get developing I recommend:
-1 - creating your own github account
+
+1 - create your own github account
+
 2 - fork this repo (optional but means you can store any changes you make)
+
 3 - add the prefix `gitpod.io/#` to this repos URL to get developing (remember to use your forked repo if you completed that step)
 
 ## Tools Used
