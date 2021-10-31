@@ -1,4 +1,12 @@
 from flask import Flask, render_template, jsonify
+import os
+
+# set port to host server
+if os.environ.get('PORT'):
+    port = os.environ.get('PORT')
+else:
+    port = 5000
+
 
 app = Flask(__name__)
 
@@ -37,4 +45,4 @@ def hello(name=None):
 '''
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)
