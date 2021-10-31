@@ -1,7 +1,11 @@
-FROM  sra405/flask-boilerplate
+FROM  continuumio/miniconda3
 
-COPY ./src/ .
+COPY . .
+
+#---------------- Prepare the envirennment
+RUN conda env update --name base --file environment.yaml --prune
+SHELL ["conda", "run", "--name", "base", "/bin/bash", "-c"]
 
 EXPOSE 5000
 
-ENTRYPOINT ["python", "app.py"]
+ENTRYPOINT ["conda", "run", "--name", "base", "python", "src/app.py"]
