@@ -17,5 +17,5 @@ jobs:
 
       - name: Build and push (App Image)
         run: |
-          heroku container:push web -a 'sra405-simple-flask-app'
-          heroku container:release web -a 'sra405-simple-flask-app'
+          HEROKU_API_KEY=${{ secrets.HEROKU_API_KEY }} heroku container:push web -a 'sra405-simple-flask-app'
+          HEROKU_API_KEY=${{ secrets.HEROKU_API_KEY }} heroku container:release web -a 'sra405-simple-flask-app'
