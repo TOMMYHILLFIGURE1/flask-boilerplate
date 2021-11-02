@@ -5,11 +5,6 @@ ports:
   - port: 5000
     onOpen: open-preview
 
-# tasks:
-#   - init: |
-#       conda init
-#       ln -s /usr/bin/python python
-
 vscode:
   extensions:
     - ms-python.python
