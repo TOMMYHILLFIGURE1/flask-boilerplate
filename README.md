@@ -33,3 +33,7 @@ Each aspect of the development and deployment cycle is in this repo, these inclu
 - `docker-compose.yaml` - a nice little tool to make local development easier. Just run `docker-compose up -d` to spin up the app defined in the `Dockerfile` locally.
 - `.gitignore` - a list of everything you don't want in version control.
 - `.gitpod` and `.gitpod.yml` - all the config and setup needed to allow development using Gitpod.
+
+## Notes
+
+Slides avaliable [here](https://docs.google.com/presentation/d/1fPhJEUKH6xeVI-9MEIO7NICGmURfDsTg64Hayw9e8-U/edit?usp=sharing)
